@@ -3,17 +3,24 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
 
 <BorderPane fx:controller="arena.ArenaController"
             stylesheets="@Arena.css"
             xmlns:fx="http://javafx.com/fxml">
   <center>
-    <Label text="Hello, world!" />
+    <Button text="Search for Loose Change" fx:id="button" />
   </center>
   <right>
     <VBox fx:id="playerInfoBox">
+      <padding>
+        <Insets top="10" left="10" right="10" bottom="10" />
+      </padding>
       <children>
-        <Label text="Name: Gede" />
+        <Label fx:id="nameLabel" />
+        <Label fx:id="fansLabel" />
+        <Label fx:id="goldLabel" />
       </children>
     </VBox>
   </right>
