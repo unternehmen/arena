@@ -38,7 +38,12 @@ public class ArenaController implements Initializable {
 		character.setName("Gede");
 
 		/* Load the player character image. */
-		avatarView.setImage(new Image("file:arena/roman.png"));
+		avatarView
+		  .setImage(
+		    new Image(
+		      getClass()
+		        .getResource("roman.png")
+		        .toExternalForm()));
 
 		/* Bind name label to the player's name. */
 		nameLabel
