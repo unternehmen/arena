@@ -8,12 +8,14 @@ import javafx.beans.property.SimpleStringProperty;
 public class Character {
 	private StringProperty name;
 	private IntegerProperty gold;
-	private IntegerProperty fans;
+	private IntegerProperty fame;
+	private IntegerProperty skill;
 
 	public Character() {
 		name = new SimpleStringProperty("");
 		gold = new SimpleIntegerProperty(0);
-		fans = new SimpleIntegerProperty(0);
+		fame = new SimpleIntegerProperty(0);
+		skill = new SimpleIntegerProperty(0);
 	}
 
 	/* Property accessors/mutators. */
@@ -34,13 +36,23 @@ public class Character {
 
 	public IntegerProperty goldProperty() { return gold; }
 
-	public final int getFans() { return fans.get(); }
+	public final int getFame() { return fame.get(); }
 
-	public final void setFans(int value) { fans.set(value); }
+	public final void setFame(int value) { fame.set(value); }
 
-	public final void changeFans(int value) {
-		fans.set(fans.get() + value);
+	public final void changeFame(int value) {
+		fame.set(fame.get() + value);
 	}
 
-	public IntegerProperty fansProperty() { return fans; }
+	public IntegerProperty fameProperty() { return fame; }
+
+	public final int getSkill() { return skill.get(); }
+
+	public final void setSkill(int value) { skill.set(value); }
+
+	public final void changeSkill(int value) {
+		skill.set(skill.get() + value);
+	}
+
+	public IntegerProperty skillProperty() { return skill; }
 }

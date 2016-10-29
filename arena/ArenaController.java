@@ -17,11 +17,19 @@ public class ArenaController implements Initializable {
 	@FXML
 	private Label nameLabel;
 	@FXML
-	private Label fansLabel;
+	private Label fameLabel;
+	@FXML
+	private Label skillLabel;
 	@FXML
 	private Label goldLabel;
 	@FXML
-	private Button button;
+	private Button moneyButton;
+	@FXML
+	private Button skillButton;
+	@FXML
+	private Button fameButton;
+	@FXML
+	private Button sponsorButton;
 
 	/**
 	 * Return a string property whose value is always the value
@@ -50,11 +58,17 @@ public class ArenaController implements Initializable {
 		  .textProperty()
 		  .bind(cat("Name: ", character.nameProperty()));
 
-		/* Bind fans label to the player's number of fans. */
-		fansLabel
+		/* Bind fame label to the player's fame. */
+		fameLabel
 		  .textProperty()
-		  .bind(cat("Fans: ",
-		            character.fansProperty().asString("%d")));
+		  .bind(cat("Fame: ",
+		            character.fameProperty().asString("%d")));
+
+		/* Bind skill label to the player's skill. */
+		skillLabel
+		  .textProperty()
+		  .bind(cat("Skill: ",
+		            character.skillProperty().asString("%d")));
 
 		/* Bind gold label to the player's gold. */
 		goldLabel
@@ -63,6 +77,8 @@ public class ArenaController implements Initializable {
 		            character.goldProperty().asString("%d")));
 
 		/* Hook up the "instant gold" button. */
-		button.setOnAction(e -> character.changeGold(1));
+		moneyButton.setOnAction(e -> character.changeGold(1));
+		fameButton.setOnAction(e -> character.changeFame(1));
+		skillButton.setOnAction(e -> character.changeSkill(1));
 	}
 }

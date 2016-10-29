@@ -24,7 +24,7 @@ public class Arena extends Application {
 			return;
 		}
 
-                Scene scene = new Scene(root, 300, 300);
+                Scene scene = new Scene(root, 640, 480);
 
                 stage.setTitle("Arena");
                 stage.setScene(scene);

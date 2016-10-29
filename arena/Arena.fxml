@@ -11,7 +11,25 @@
             stylesheets="@Arena.css"
             xmlns:fx="http://javafx.com/fxml">
   <center>
-    <Button text="Search for Loose Change" fx:id="button" />
+    <VBox spacing="10">
+      <padding>
+        <Insets left="10" top="10" bottom="10" right="10" />
+      </padding>
+      <children>
+        <Label text="What will you do today?" />
+        <VBox spacing="10">
+          <padding>
+            <Insets left="10" />
+          </padding>
+          <children>
+            <Button text="Help with the Harvest" fx:id="moneyButton" />
+            <Button text="Have a Match at the Gym" fx:id="skillButton" />
+            <Button text="Mingle at the Forum" fx:id="fameButton" />
+            <Button text="Find a Sponsor" fx:id="sponsorButton" />
+          </children>
+        </VBox>
+      </children>
+    </VBox>
   </center>
   <right>
     <VBox fx:id="playerInfoBox">
@@ -21,7 +39,8 @@
       <children>
         <ImageView fx:id="avatarView" />
         <Label fx:id="nameLabel" />
-        <Label fx:id="fansLabel" />
+        <Label fx:id="fameLabel" />
+        <Label fx:id="skillLabel" />
         <Label fx:id="goldLabel" />
       </children>
     </VBox>
