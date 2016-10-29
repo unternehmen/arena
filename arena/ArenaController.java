@@ -8,8 +8,12 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Button;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.binding.StringExpression;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 public class ArenaController implements Initializable {
+	@FXML
+	private ImageView avatarView;
 	@FXML
 	private Label nameLabel;
 	@FXML
@@ -32,6 +36,9 @@ public class ArenaController implements Initializable {
 	public void initialize(URL url, ResourceBundle rb) {
 		Character character = new Character();
 		character.setName("Gede");
+
+		/* Load the player character image. */
+		avatarView.setImage(new Image("file:arena/roman.png"));
 
 		/* Bind name label to the player's name. */
 		nameLabel
